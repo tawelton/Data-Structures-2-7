@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dictionary</h2>
+
+<ol>
+    <li><a href="@Url.Action("AddOne", "Dictionary")" class="w3-bar-item w3-button">Add one item to Dictionary</a></li>
+    <li><a href="@Url.Action("AddHugeList", "Dictionary")" class="w3-bar-item w3-button">Add huge list of items to Dictionary</a></li>
+    <li><a href="@Url.Action("DisplayDictionary", "Dictionary")" class="w3-bar-item w3-button">Display Dictionary</a></li>
+    <li><a href="@Url.Action("DeleteFromDictionary", "Dictionary")" class="w3-bar-item w3-button">Delete from Dictionary</a></li>
+    <li><a href="@Url.Action("ClearDictionary", "Dictionary")" class="w3-bar-item w3-button">Clear Dictionary</a></li>
+    <li><a href="@Url.Action("SearchDictionary", "Dictionary")" class="w3-bar-item w3-button">Search Dictionary</a></li>
+    <li><a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Return to Main Menu</a></li>
+</ol>
+
+<div class="searchResult">
+    <span class="stopwatch">@Html.Raw(ViewBag.Stopwatch)</span>
+    <span class="result">@Html.Raw(ViewBag.searchResult)</span>
+</div>
+
+<ul>
+    @Html.Raw(ViewBag.Dictionary)
+</ul>

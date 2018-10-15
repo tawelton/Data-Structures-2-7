@@ -208,12 +208,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="obj\Debug\DataStructures_2-7.csproj.CopyComplete" />
     <Content Include="obj\Debug\DataStructures_2-7.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\DataStructures_2-7.csprojAssemblyReference.cache" />
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <Content Include="obj\Debug\Tsc.out" />
+    <Content Include="obj\Release\DataStructures_2-7.csproj.CoreCompileInputs.cache" />
     <Content Include="bin\DataStructures_2-7.dll.config" />
     <Content Include="bin\roslyn\csc.exe.config" />
     <Content Include="bin\roslyn\csc.rsp" />

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+<ol>
+    <li><a href="@Url.Action("AddOne", "Queue")" class="w3-bar-item w3-button">Add one item to queue</a></li>
+    <li><a href="@Url.Action("AddHugeList", "Queue")" class="w3-bar-item w3-button">Add huge list of items to queue</a></li>
+    <li><a href="@Url.Action("Display", "Queue")" class="w3-bar-item w3-button">Display queue</a></li>
+    <li><a href="@Url.Action("Delete", "Queue")" class="w3-bar-item w3-button">Delete from queue</a></li>
+    <li><a href="@Url.Action("Clear", "Queue")" class="w3-bar-item w3-button">Clear queue</a></li>
+    <li><a href="@Url.Action("Search", "Queue")" class="w3-bar-item w3-button">Search Queue</a></li>
+    <li><a href="@Url.Action("Index", "Queue")" class="w3-bar-item w3-button">Return to Main Menu</a></li>
+</ol>
+    
+
+@{
+    <h2>Your Queue Contains @ViewBag.i Items</h2>
+    foreach (var item in ViewBag.MyQueue)
+    {
+        <p>@item</p>
+    }
+}
+

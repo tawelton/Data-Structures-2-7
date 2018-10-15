@@ -4,3 +4,8 @@
 	margin-right: auto;
 	width: 50%;
 }
+
+.stopwatch {
+    font-size: 2em;
+    color: orangered;
+}

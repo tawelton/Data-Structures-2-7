@@ -12,6 +12,7 @@ namespace DataStructures_2_7.Controllers
         public static int i = 0;
         public static int entryNumber = 0;
         // GET: Queue
+
         public ActionResult Index()
         {
             ViewBag.MyQueue = myQueue;
@@ -19,6 +20,7 @@ namespace DataStructures_2_7.Controllers
             return View();
         }
 
+        //This method adds one entry to the queue
         public ActionResult AddOne()
         {
             ++i;
@@ -29,6 +31,7 @@ namespace DataStructures_2_7.Controllers
             return View("Index");
         }
 
+        //This method clears the queue then adds 2000 entries to the queue
         public ActionResult AddHugeList()
         {
             myQueue.Clear();
@@ -45,6 +48,7 @@ namespace DataStructures_2_7.Controllers
             return View("Index");
         }
 
+        //This method displays what entries are currently in the queue
         public ActionResult Display()
         {
             ViewBag.MyQueue = myQueue;
@@ -52,6 +56,7 @@ namespace DataStructures_2_7.Controllers
             return View();
         }
 
+        //This method deletes one item from the queue (FIFO)
         public ActionResult Delete()
         {
             --i;
@@ -61,6 +66,7 @@ namespace DataStructures_2_7.Controllers
             return View("Index");
         }
 
+        //This method clears all entries from the queue
         public ActionResult Clear()
         {
             myQueue.Clear();
@@ -71,9 +77,9 @@ namespace DataStructures_2_7.Controllers
             return View("Index");
         }
 
+        //This method searches the queue to find entry #1456
         public ActionResult Search()
         {
-       
             bool isFound = false;
             string searchEntry = "New Entry #1456";
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
@@ -98,11 +104,5 @@ namespace DataStructures_2_7.Controllers
             return View("Search");
         }
 
-        /*public ActionResult ReturnToMenu()
-        {
-            ViewBag.MyQueue = myQueue;
-            ViewBag.i = i;
-            return View("Index");
-        }*/
     }
 }

@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+ Data Structures Assignment
+ Section 2
+ Group 7
+ Professor Greg Anderson
+ 
+ Sophia Shaw
+ Tanner Welton
+ Reeves Westover
+ John Martin
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

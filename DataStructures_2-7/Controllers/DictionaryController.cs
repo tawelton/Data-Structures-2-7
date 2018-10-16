@@ -41,7 +41,7 @@ namespace DataStructures_2_7.Controllers
         {
             foreach (KeyValuePair<string,int> item in oDictionary)
             {
-                ViewBag.Dictionary += "<li>New Entry #" + item.Value.ToString() + "</li>";
+                ViewBag.Dictionary += "<li class=\"list-group-item\">New Entry #" + item.Value.ToString() + "</li>";
             }
 
             return View("Index");
@@ -70,18 +70,18 @@ namespace DataStructures_2_7.Controllers
 
             if (oDictionary.ContainsKey("New Entry #7"))
             {
-                ViewBag.SearchResult = "Found";
+                ViewBag.SearchResult = "Record Exists: True";
             }
             else
             {
-                ViewBag.SearchResult = "Not Found";
+                ViewBag.SearchResult = "Record Exists: False";
             }
 
             sw.Stop();
 
             TimeSpan ts = sw.Elapsed;
 
-            ViewBag.StopWatch = ts.Milliseconds + "ms";
+            ViewBag.StopWatch = "Search Time: " + ts.Milliseconds + "ms";
 
             return View("Index");
         }

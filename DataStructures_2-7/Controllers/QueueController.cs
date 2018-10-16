@@ -23,7 +23,7 @@ namespace DataStructures_2_7.Controllers
         {
             ++i;
             ++entryNumber;
-            myQueue.Enqueue("New Entry " + entryNumber.ToString());
+            myQueue.Enqueue("New Entry #" + entryNumber.ToString());
             ViewBag.MyQueue = myQueue;
             ViewBag.i = i;
             return View("Index");
@@ -38,7 +38,7 @@ namespace DataStructures_2_7.Controllers
             {
                 ++i;
                 ++entryNumber;
-                myQueue.Enqueue("New Entry " + entryNumber.ToString());
+                myQueue.Enqueue("New Entry #" + entryNumber.ToString());
             }
             ViewBag.MyQueue = myQueue;
             ViewBag.i = i;
@@ -75,26 +75,25 @@ namespace DataStructures_2_7.Controllers
         {
        
             bool isFound = false;
-            string searchEntry = "New Entry 1456";
-            isFound = myQueue.Contains(searchEntry);
+            string searchEntry = "New Entry #1456";
             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
             sw.Start();
 
-                if (isFound)
+                if (myQueue.Contains(searchEntry))
                 {
-                    ViewBag.message = searchEntry + " is found in the queue.";
+                    ViewBag.message = "Record Exists: True";
                 }
                 else
                 {
-                    ViewBag.message = searchEntry + " is not found in the queue.";
+                    ViewBag.message = "Record Exists: False";
                 }
 
             sw.Stop();
 
             TimeSpan ts = sw.Elapsed;
 
-            ViewBag.StopWatch = ts;
+            ViewBag.StopWatch = "Search Time: " + ts.Milliseconds + "ms";
          
             return View("Search");
         }

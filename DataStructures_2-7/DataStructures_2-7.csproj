@@ -103,8 +103,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Scripts\JavaScript.js" />
-    <Content Include="App_Data\CSS\style.css" />
+    <Content Include="App_Data\Scripts\script.js" />
     <Content Include="bin\DataStructures_2-7.dll" />
     <Content Include="bin\DataStructures_2-7.pdb" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
@@ -247,7 +246,6 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DictionaryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QueueController.cs" />

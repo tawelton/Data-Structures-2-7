@@ -3,24 +3,32 @@
     ViewBag.Title = "Stack";
 }
 
-<h2>Stack</h2>
+<center><h2>Stack</h2></center>
 
-<ol>
-    <li><a href="@Url.Action("AddOne", "Stack")">Add one item to Stack</a></li>
-    <li><a href="@Url.Action("AddHugeList", "Stack")">Add Huge List of Items to Stack</a></li>
-    <li><a href="@Url.Action("DisplayStack", "Stack")">Display Stack</a></li>
-    <li><a href="@Url.Action("DeleteFromStack", "Stack")">Delete from Stack</a></li>
-    <li><a href="@Url.Action("ClearStack", "Stack")">Clear Stack</a></li>
-    <li><a href="@Url.Action("SearchStack", "Stack")">Search Stack</a></li>
-    <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
-</ol>
+<div class="row">
+    <div class="col-md-4">
+        <ul class="nav nav-pills nav-stacked nav-menu-background">
+            <li><a href="@Url.Action("AddOne", "Stack")">Add one item to Stack</a></li>
+            <li><a href="@Url.Action("AddHugeList", "Stack")">Add huge list of Items to Stack</a></li>
+            <li><a href="@Url.Action("DisplayStack", "Stack")">Display Stack</a></li>
+            <li><a href="@Url.Action("DeleteFromStack", "Stack")">Delete from Stack</a></li>
+            <li><a href="@Url.Action("ClearStack", "Stack")">Clear Stack</a></li>
+            <li><a href="@Url.Action("SearchStack", "Stack")">Search Stack</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+        </ul>
+    </div>
 
-<div class="searchResult">
-    <span class="stopwatch">@Html.Raw(ViewBag.Stopwatch)</span>
-    <span class="result">@Html.Raw(ViewBag.searchResult)</span>
+    <div class="col-md-8">
+
+        <ul class="list-group">
+            @Html.Raw(ViewBag.Stack)
+        </ul>
+
+        <div class="searchResult">
+            <span class="stopwatch">@Html.Raw(ViewBag.Stopwatch)</span>
+            </br>
+            <span class="result">@Html.Raw(ViewBag.searchResult)</span>
+        </div>
+
+    </div>
 </div>
-
-<ul>
-    @Html.Raw(ViewBag.Stack)
-</ul>
-

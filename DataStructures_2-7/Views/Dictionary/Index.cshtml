@@ -3,23 +3,32 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Dictionary</h2>
+<center><h2>Dictionary</h2></center>
 
-<ol>
-    <li><a href="@Url.Action("AddOne", "Dictionary")" class="w3-bar-item w3-button">Add one item to Dictionary</a></li>
-    <li><a href="@Url.Action("AddHugeList", "Dictionary")" class="w3-bar-item w3-button">Add huge list of items to Dictionary</a></li>
-    <li><a href="@Url.Action("DisplayDictionary", "Dictionary")" class="w3-bar-item w3-button">Display Dictionary</a></li>
-    <li><a href="@Url.Action("DeleteFromDictionary", "Dictionary")" class="w3-bar-item w3-button">Delete from Dictionary</a></li>
-    <li><a href="@Url.Action("ClearDictionary", "Dictionary")" class="w3-bar-item w3-button">Clear Dictionary</a></li>
-    <li><a href="@Url.Action("SearchDictionary", "Dictionary")" class="w3-bar-item w3-button">Search Dictionary</a></li>
-    <li><a href="@Url.Action("Index", "Dictionary")" class="w3-bar-item w3-button">Return to Main Menu</a></li>
-</ol>
+<div class="row">
+    <div class="col-md-4">
+        <ul class="nav nav-pills nav-stacked nav-menu-background">
+            <li><a href="@Url.Action("AddOne", "Dictionary")">Add one item to Dictionary</a></li>
+            <li><a href="@Url.Action("AddHugeList", "Dictionary")">Add huge list of items to Dictionary</a></li>
+            <li><a href="@Url.Action("DisplayDictionary", "Dictionary")">Display Dictionary</a></li>
+            <li><a href="@Url.Action("DeleteFromDictionary", "Dictionary")">Delete from Dictionary</a></li>
+            <li><a href="@Url.Action("ClearDictionary", "Dictionary")">Clear Dictionary</a></li>
+            <li><a href="@Url.Action("SearchDictionary", "Dictionary")">Search Dictionary</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Return to Main Menu</a></li>
+        </ul>
+    </div>
 
-<div class="searchResult">
-    <span class="stopwatch">@Html.Raw(ViewBag.Stopwatch)</span>
-    <span class="result">@Html.Raw(ViewBag.searchResult)</span>
+    <div class="col-md-8">
+
+        <ul class="list-group">
+            @Html.Raw(ViewBag.Dictionary)
+        </ul>
+
+        <div class="searchResult">
+            <span class="stopwatch">@Html.Raw(ViewBag.Stopwatch)</span>
+            </br>
+            <span class="result">@Html.Raw(ViewBag.searchResult)</span>
+        </div>
+
+    </div>
 </div>
-
-<ul>
-    @Html.Raw(ViewBag.Dictionary)
-</ul>

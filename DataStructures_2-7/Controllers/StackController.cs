@@ -41,7 +41,7 @@ namespace DataStructures_2_7.Controllers
         public ActionResult DisplayStack()
         {
             foreach (string item in oStack) {
-                ViewBag.Stack += "<li>" + item + "</li>";
+                ViewBag.Stack += "<li class=\"list-group-item\">" + item + "</li>";
              }
 
             return View("Index");
@@ -70,18 +70,18 @@ namespace DataStructures_2_7.Controllers
 
             if (oStack.Contains("New Entry #3"))
             {
-                ViewBag.SearchResult = "Found";
+                ViewBag.SearchResult = "Record Exists: True";
             }
             else
             {
-                ViewBag.SearchResult = "Not Found";
+                ViewBag.SearchResult = "Record Exists: False";
             }
 
             sw.Stop();
 
             TimeSpan ts = sw.Elapsed;
 
-            ViewBag.StopWatch = ts.Milliseconds + "ms";
+            ViewBag.StopWatch = "Search Time: " + ts.Milliseconds + "ms";
 
             return View("Index");
         }
